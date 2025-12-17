@@ -1,0 +1,40 @@
+---
+import { VelocityApp } from "../components/VelocityApp";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HSRmap — High-Speed Rail Network Status</title>
+    <meta
+      name="description"
+      content="Visualization of America's high-speed rail network. Neutral, real-time construction status, speeds, and cost data. A source of truth for HSR infrastructure."
+    />
+    <meta name="keywords" content="high-speed rail, HSR, USA, infrastructure, visualization, data, transportation" />
+    <meta name="author" content="HSRmap" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="HSRmap — High-Speed Rail Network Status" />
+    <meta property="og:description" content="Visualization of America's high-speed rail network. Real-time construction status, speeds, and cost data." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="hsl(240, 5%, 8%)" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <VelocityApp client:only="react" />
+  </body>
+</html>

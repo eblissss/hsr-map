@@ -1,0 +1,506 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "brightline-florida",
+      "properties": {
+        "id": "brightline-florida",
+        "name": "Brightline Florida (Miami-Orlando)",
+        "segments": [
+          "Miami",
+          "Aventura",
+          "Fort Lauderdale",
+          "Boca Raton",
+          "West Palm Beach",
+          "Orlando"
+        ],
+        "design_speed_mph": 125,
+        "cost_est_billions": 6.0,
+        "status": "COMPLETED",
+        "completion_year_tgt": 2023,
+        "length_miles": 235,
+        "travel_time_minutes": 205,
+        "drive_time_minutes": 230,
+        "flight_time_minutes": 140,
+        "jobs_created": 10000,
+        "annual_ridership_est": 4300000,
+        "description": "Fully operational. The route follows the Florida East Coast Railway north to Cocoa, then curves west along the SR 528 (Beachline Expressway) corridor to Orlando International Airport (MCO). Tampa extension is in planning."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-80.195, 25.778],
+          [-80.192, 25.85],
+          [-80.146, 25.957],
+          [-80.14, 26.05],
+          [-80.144, 26.12],
+          [-80.13, 26.25],
+          [-80.08, 26.358],
+          [-80.056, 26.712],
+          [-80.06, 26.95],
+          [-80.15, 27.2],
+          [-80.25, 27.4],
+          [-80.35, 27.6],
+          [-80.45, 27.8],
+          [-80.6, 28.0],
+          [-80.7, 28.2],
+          [-80.75, 28.38],
+          [-80.85, 28.4],
+          [-81.0, 28.42],
+          [-81.15, 28.43],
+          [-81.25, 28.44],
+          [-81.308, 28.42]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cahsr-ios",
+      "properties": {
+        "id": "cahsr-ios",
+        "name": "California HSR (Initial Operating Segment)",
+        "segments": [
+          "Merced",
+          "Madera",
+          "Fresno",
+          "Kings/Tulare",
+          "Bakersfield"
+        ],
+        "design_speed_mph": 220,
+        "cost_est_billions": 35.3,
+        "status": "CONSTRUCTION",
+        "completion_year_tgt": 2032,
+        "length_miles": 171,
+        "travel_time_minutes": 58,
+        "drive_time_minutes": 195,
+        "flight_time_minutes": 165,
+        "jobs_created": 15500,
+        "annual_ridership_est": 2200000,
+        "description": "Civil construction is complete on major viaducts (San Joaquin River, Cedar Viaduct). Track and Systems installation (contract awarded June 2024) is the current phase. Testing begins 2030."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-120.4829, 37.3021],
+          [-120.4, 37.25],
+          [-120.276, 37.147],
+          [-120.15, 37.05],
+          [-120.063, 36.958],
+          [-119.95, 36.85],
+          [-119.793, 36.729],
+          [-119.772, 36.747],
+          [-119.72, 36.68],
+          [-119.65, 36.6],
+          [-119.55, 36.5],
+          [-119.45, 36.4],
+          [-119.294, 36.216],
+          [-119.35, 36.15],
+          [-119.45, 36.0],
+          [-119.5, 35.9],
+          [-119.48, 35.75],
+          [-119.38, 35.6],
+          [-119.25, 35.5],
+          [-119.15, 35.42],
+          [-119.019, 35.373]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "brightline-west",
+      "properties": {
+        "id": "brightline-west",
+        "name": "Brightline West",
+        "segments": ["Las Vegas", "Victor Valley", "Rancho Cucamonga"],
+        "design_speed_mph": 200,
+        "cost_est_billions": 12.0,
+        "status": "CONSTRUCTION",
+        "completion_year_tgt": 2029,
+        "length_miles": 218,
+        "travel_time_minutes": 130,
+        "drive_time_minutes": 270,
+        "flight_time_minutes": 145,
+        "jobs_created": 35000,
+        "annual_ridership_est": 12000000,
+        "description": "Following the April 2024 groundbreaking, heavy civil works are visible in the I-15 median. The route climbs the Cajon Pass to connect with Metrolink in Rancho Cucamonga."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-115.172, 36.08],
+          [-115.17, 36.02],
+          [-115.25, 35.95],
+          [-115.4, 35.85],
+          [-115.55, 35.65],
+          [-115.65, 35.5],
+          [-115.9, 35.45],
+          [-116.102, 35.243],
+          [-116.3, 35.15],
+          [-116.5, 35.05],
+          [-116.8, 34.95],
+          [-117.041, 34.895],
+          [-117.2, 34.75],
+          [-117.3, 34.6],
+          [-117.393, 34.542],
+          [-117.38, 34.45],
+          [-117.42, 34.35],
+          [-117.45, 34.25],
+          [-117.5, 34.18],
+          [-117.594, 34.107]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "nec-acela",
+      "properties": {
+        "id": "nec-acela",
+        "name": "Northeast Corridor",
+        "segments": [
+          "Boston",
+          "Providence",
+          "New Haven",
+          "New York",
+          "Philadelphia",
+          "Baltimore",
+          "DC"
+        ],
+        "design_speed_mph": 160,
+        "cost_est_billions": 117.0,
+        "status": "COMPLETED",
+        "completion_year_tgt": 2025,
+        "length_miles": 457,
+        "travel_time_minutes": 205,
+        "drive_time_minutes": 360,
+        "flight_time_minutes": 165,
+        "jobs_created": 45000,
+        "annual_ridership_est": 18000000,
+        "description": "Operational. The 'Avelia Liberty' fleet rollout in late 2025 has modernized the service. Major ongoing construction includes the Gateway Tunnel (NY-NJ) and the Frederick Douglass Tunnel (Baltimore)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-71.059, 42.361],
+          [-71.15, 42.25],
+          [-71.374, 41.826],
+          [-71.8, 41.4],
+          [-72.3, 41.35],
+          [-72.926, 41.308],
+          [-73.55, 41.05],
+          [-73.966, 40.781],
+          [-74.171, 40.735],
+          [-74.5, 40.4],
+          [-74.75, 40.2],
+          [-75.165, 39.952],
+          [-75.526, 39.742],
+          [-76.167, 39.449],
+          [-76.612, 39.29],
+          [-76.9, 39.0],
+          [-77.036, 38.907]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cascadia-hsr",
+      "properties": {
+        "id": "cascadia-hsr",
+        "name": "Cascadia UHSGT",
+        "segments": [
+          "Vancouver BC",
+          "Bellingham",
+          "Seattle",
+          "Tacoma",
+          "Portland"
+        ],
+        "design_speed_mph": 250,
+        "cost_est_billions": 42.0,
+        "status": "PLANNING",
+        "completion_year_tgt": 2038,
+        "length_miles": 310,
+        "travel_time_minutes": 60,
+        "drive_time_minutes": 360,
+        "flight_time_minutes": 150,
+        "jobs_created": 38000,
+        "annual_ridership_est": 3000000,
+        "description": "Currently in Service Development Planning (SDP) funded by a $49.7M federal grant awarded Dec 2024. The project enjoys strong binational support but lacks construction funding."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-123.12, 49.282],
+          [-122.9, 49.15],
+          [-122.75, 48.95],
+          [-122.537, 48.752],
+          [-122.35, 48.3],
+          [-122.2, 47.9],
+          [-122.332, 47.606],
+          [-122.4, 47.25],
+          [-122.659, 47.253],
+          [-122.9, 47.05],
+          [-123.024, 46.732],
+          [-122.9, 46.1],
+          [-122.678, 45.515]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "phoenix-tucson",
+      "properties": {
+        "id": "phoenix-tucson",
+        "name": "Arizona Sun Corridor",
+        "segments": ["Tucson", "Eloy", "Queen Creek", "Phoenix", "Buckeye"],
+        "design_speed_mph": 125,
+        "cost_est_billions": 4.5,
+        "status": "STUDYING",
+        "completion_year_tgt": 2035,
+        "length_miles": 120,
+        "travel_time_minutes": 80,
+        "drive_time_minutes": 110,
+        "flight_time_minutes": 0,
+        "jobs_created": 7000,
+        "annual_ridership_est": 1800000,
+        "description": "FRA approved the Service Development Plan scope/budget ($10.6M) in June 2025. The route (Yellow Alternative) follows I-10 and Union Pacific ROW."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-110.974, 32.222],
+          [-111.1, 32.35],
+          [-111.3, 32.55],
+          [-111.5, 32.75],
+          [-111.65, 32.9],
+          [-111.8, 33.1],
+          [-111.95, 33.3],
+          [-112.074, 33.448],
+          [-112.3, 33.4],
+          [-112.583, 33.37]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "texas-central",
+      "properties": {
+        "id": "texas-central",
+        "name": "Texas Central Railway",
+        "segments": ["Dallas", "Brazos Valley", "Houston"],
+        "design_speed_mph": 205,
+        "cost_est_billions": 30.0,
+        "status": "HALTED",
+        "completion_year_tgt": null,
+        "length_miles": 240,
+        "travel_time_minutes": 90,
+        "drive_time_minutes": 240,
+        "flight_time_minutes": 135,
+        "jobs_created": 0,
+        "annual_ridership_est": 0,
+        "description": "Project dormant. Amtrak withdrew its partnership in April 2025 following federal funding ineligibility rulings. Land acquisition has ceased."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-96.808, 32.747],
+          [-96.7, 32.5],
+          [-96.534, 32.341],
+          [-96.4, 32.1],
+          [-96.293, 31.848],
+          [-96.2, 31.5],
+          [-96.187, 31.297],
+          [-96.1, 30.8],
+          [-96.098, 30.627],
+          [-95.95, 30.4],
+          [-95.89, 30.267],
+          [-95.7, 30.1],
+          [-95.5, 29.9],
+          [-95.369, 29.76]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "brightline-tampa",
+      "properties": {
+        "id": "brightline-tampa",
+        "name": "Brightline Florida (Tampa Extension)",
+        "segments": ["Orlando", "Disney/Springs", "Lakeland", "Tampa"],
+        "design_speed_mph": 125,
+        "cost_est_billions": 2.5,
+        "status": "PLANNING",
+        "completion_year_tgt": 2030,
+        "length_miles": 85,
+        "travel_time_minutes": 60,
+        "drive_time_minutes": 90,
+        "flight_time_minutes": 0,
+        "jobs_created": 5000,
+        "annual_ridership_est": 2900000,
+        "description": "Brightline's next priority. In July 2025, the company applied for $400M in bonds to jumpstart the extension. The route utilizes the I-4 median. A station in Ybor City is the likely Tampa terminus."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-81.308, 28.42],
+          [-81.45, 28.38],
+          [-81.6, 28.3],
+          [-81.95, 28.1],
+          [-82.1, 28.05],
+          [-82.35, 28.0],
+          [-82.457, 27.95]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "atlanta-savannah",
+      "properties": {
+        "id": "atlanta-savannah",
+        "name": "Georgia Rail Passenger Program",
+        "segments": ["Atlanta", "Macon", "Savannah"],
+        "design_speed_mph": 125,
+        "cost_est_billions": 4.0,
+        "status": "STUDYING",
+        "completion_year_tgt": 2035,
+        "length_miles": 250,
+        "travel_time_minutes": 130,
+        "drive_time_minutes": 230,
+        "flight_time_minutes": 65,
+        "jobs_created": 3000,
+        "annual_ridership_est": 1100000,
+        "description": "GDOT launched a formal feasibility study in May 2025 to connect Atlanta and Savannah. High-speed rail (>125mph) is the 'preferred technology' being evaluated. Environmental Impact Statement (EIS) expected by 2028."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-84.388, 33.749],
+          [-84.1, 33.5],
+          [-83.63, 32.84],
+          [-83.0, 32.5],
+          [-82.2, 32.3],
+          [-81.5, 32.15],
+          [-81.099, 32.08]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "illinois-220",
+      "properties": {
+        "id": "illinois-220",
+        "name": "Illinois HSR",
+        "segments": [
+          "Chicago",
+          "Kankakee",
+          "Champaign-Urbana",
+          "Decatur",
+          "Springfield",
+          "Alton",
+          "St. Louis"
+        ],
+        "design_speed_mph": 220,
+        "cost_est_billions": 18.5,
+        "status": "STUDYING",
+        "completion_year_tgt": 2040,
+        "length_miles": 298,
+        "travel_time_minutes": 105,
+        "drive_time_minutes": 300,
+        "flight_time_minutes": 145,
+        "jobs_created": 12000,
+        "annual_ridership_est": 5500000,
+        "description": "A distinct project from the existing 110 mph Amtrak service. The Illinois High-Speed Railway Commission is finalizing the Service Development Plan for this dedicated 220 mph electric corridor, likely following the I-55 or existing IC rights-of-way."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-87.639, 41.878],
+          [-87.65, 41.7],
+          [-87.7, 41.55],
+          [-87.85, 41.15],
+          [-88.1, 40.8],
+          [-88.243, 40.116],
+          [-88.5, 39.95],
+          [-88.95, 39.84],
+          [-89.3, 39.95],
+          [-89.65, 39.8],
+          [-89.8, 39.5],
+          [-90.0, 39.1],
+          [-90.15, 38.9],
+          [-90.19, 38.627]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "atlanta-charlotte",
+      "properties": {
+        "id": "atlanta-charlotte",
+        "name": "Southeast HSR (Greenfield Corridor)",
+        "segments": [
+          "Atlanta",
+          "Athens",
+          "Anderson",
+          "Greenville",
+          "Spartanburg",
+          "Charlotte"
+        ],
+        "design_speed_mph": 220,
+        "cost_est_billions": 8.5,
+        "status": "STUDYING",
+        "completion_year_tgt": 2042,
+        "length_miles": 244,
+        "travel_time_minutes": 125,
+        "drive_time_minutes": 240,
+        "flight_time_minutes": 140,
+        "jobs_created": 11000,
+        "annual_ridership_est": 2500000,
+        "description": "Selected as the 'Preferred Alternative' in the Tier 1 EIS. This 'Greenfield' route would bypass the slow, curvy freight lines used by the Amtrak Crescent to achieve true high speeds parallel to I-85."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-84.388, 33.749],
+          [-84.25, 33.85],
+          [-84.0, 34.0],
+          [-83.357, 33.951],
+          [-82.9, 34.3],
+          [-82.65, 34.503],
+          [-82.35, 34.85],
+          [-81.932, 34.949],
+          [-81.5, 35.1],
+          [-81.1, 35.2],
+          [-80.843, 35.227]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "high-desert",
+      "properties": {
+        "id": "high-desert",
+        "name": "High Desert Corridor",
+        "segments": ["Palmdale", "Victor Valley"],
+        "design_speed_mph": 180,
+        "cost_est_billions": 4.0,
+        "status": "STUDYING",
+        "completion_year_tgt": 2035,
+        "length_miles": 54,
+        "travel_time_minutes": 25,
+        "drive_time_minutes": 60,
+        "flight_time_minutes": 0,
+        "jobs_created": 8000,
+        "annual_ridership_est": 1500000,
+        "description": "Environmentally cleared. Connects CAHSR (Palmdale) to Brightline West (Victor Valley) at speeds up to 180 mph."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-118.112, 34.579],
+          [-117.9, 34.56],
+          [-117.65, 34.55],
+          [-117.393, 34.542]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+@import "tailwindcss";
+
+@theme {
+  /* Void Color System */
+  --color-substrate: hsl(240, 5%, 8%);
+  --color-surface: hsla(240, 5%, 12%, 0.8);
+  --color-border: hsla(0, 0%, 100%, 0.08);
+  --color-text-primary: hsl(0, 0%, 90%);
+  --color-text-muted: hsl(0, 0%, 50%);
+
+  /* Thermal Data Spectrum */
+  --color-mach-1: #00F0FF;
+  --color-mach-2: #FFC107;
+  --color-mach-3: #FF5722;
+
+  /* Status Colors */
+  --color-status-construction: #10B981;
+  --color-status-planning: #F59E0B;
+  --color-status-halted: #EF4444;
+  --color-status-funded: #8B5CF6;
+
+  /* Typography */
+  --font-family-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-data: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Custom Spacing */
+  --spacing-glass-blur: 24px;
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-substrate);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-family-display);
+}
+
+.font-data {
+  font-family: var(--font-family-data);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glass Material */
+.glass {
+  background: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(var(--spacing-glass-blur)) saturate(180%);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Film Grain Overlay */
+.grain-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Thermal Color Classes */
+.thermal-mach-1 {
+  color: var(--color-mach-1);
+}
+
+.thermal-mach-2 {
+  color: var(--color-mach-2);
+}
+
+.thermal-mach-3 {
+  color: var(--color-mach-3);
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge-construction {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-status-construction);
+}
+
+.status-badge-planning {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-status-planning);
+}
+
+.status-badge-halted {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-status-halted);
+}
+
+.status-badge-funded {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--color-status-funded);
+}
+
+.status-badge-proposed {
+  background: rgba(100, 116, 139, 0.1);
+  color: #94a3b8;
+}
+
+/* Pulsing Dot Animation */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+/* MapLibre Container */
+.maplibregl-map {
+  font-family: var(--font-family-display);
+}
+
+.maplibregl-ctrl-logo {
+  display: none !important;
+}
+
+.maplibregl-ctrl-attrib {
+  display: none !important;
+}
+
+.maplibregl-ctrl {
+  opacity: 0.7;
+  transition: opacity 200ms;
+}
+
+.maplibregl-ctrl:hover {
+  opacity: 1;
+}
+
+/* Deck.gl Tooltip */
+.deck-tooltip {
+  font-family: var(--font-family-data);
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.95);
+  color: var(--color-text-primary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  pointer-events: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  animation: tooltipFadeIn 150ms ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(20px) saturate(160%);
+  }
+  
+  /* Prevent text selection on mobile for better UX */
+  .font-data {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* Optimize touch targets */
+  button,
+  [role="button"],
+  .cursor-pointer {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Loading state (if needed) */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Tooltip fade-in animation */
+@keyframes tooltip-fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -4px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-tooltip-fade-in {
+  animation: tooltip-fade-in 150ms ease-out;
+}
+
+/* Progress ring for construction status */
+@keyframes progress-ring {
+  0% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.progress-ring {
+  animation: progress-ring 1s ease-out forwards;
+}
+
+/* Particle streak animation */
+@keyframes particle-streak {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.particle-streak {
+  animation: particle-streak 2s ease-in-out infinite;
+}
+
+/* Focus mode transition */
+.focus-mode-enter {
+  animation: fade-out 300ms ease-out forwards;
+}
+
+.focus-mode-exit {
+  animation: fade-in 300ms ease-in forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
