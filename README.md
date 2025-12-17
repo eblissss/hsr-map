@@ -46,4 +46,3 @@ npm run preview
 - Route details and comparison
 - Thermal color coding by speed
 - Real-time data visualization
-- Keyboard navigation support

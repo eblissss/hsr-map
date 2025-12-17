@@ -5,6 +5,8 @@ export type ProjectStatus =
   | "COMPLETED"
   | "HALTED";
 
+export type VelocityClass = "MACH_1" | "MACH_2" | "MACH_3";
+
 export interface RailRoute {
   id: string;
   name: string;

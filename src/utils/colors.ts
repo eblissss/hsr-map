@@ -28,15 +28,8 @@ export function getColorBySpeed(speed: number): [number, number, number] {
   return SPEED_COLORS.MACH_3;
 }
 
-export function getVelocityClass(speed: number): VelocityClass {
-  if (speed >= 200) return "MACH_1";
-  if (speed >= 150) return "MACH_2";
-  return "MACH_3";
-}
-
 export function getColorHexBySpeed(speed: number): string {
   if (speed >= 200) return SPEED_COLORS_HEX.MACH_1;
   if (speed >= 150) return SPEED_COLORS_HEX.MACH_2;
   return SPEED_COLORS_HEX.MACH_3;
 }
-

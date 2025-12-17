@@ -1,0 +1,21 @@
+{
+  "name": "HSRmap - High-Speed Rail Network Status",
+  "short_name": "HSRmap",
+  "description": "Visualization of America's high-speed rail network with real-time construction status, speeds, and cost data.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f14",
+  "theme_color": "#5d0f8a",
+  "orientation": "portrait-primary",
+  "categories": ["maps", "transportation", "productivity"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+}

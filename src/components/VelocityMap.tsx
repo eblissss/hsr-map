@@ -313,7 +313,7 @@ export function VelocityMap() {
         onClick={handleClick}
         onHover={handleHover}
         getCursor={() => cursor}
-        pickingRadius={20}
+        pickingRadius={window.innerWidth < 768 ? 30 : 20} // Larger touch target on mobile
         onViewStateChange={({ viewState: newViewState }) => {
           // Update store only if not in transition
           if (!newViewState.transitionDuration) {

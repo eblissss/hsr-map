@@ -160,8 +160,9 @@ export function RouteDetail({ route, onClose }: RouteDetailProps) {
       ref={cardRef}
       role="dialog"
       aria-modal="true"
+      aria-labelledby="route-title"
       tabIndex={-1}
-      className="fixed top-4 right-4 w-full max-w-[380px] z-[100] outline-none"
+      className="fixed top-4 right-4 bottom-4 left-4 md:top-4 md:right-4 md:left-auto md:bottom-auto w-full max-w-[380px] md:max-w-[380px] z-[100] outline-none"
     >
       <div className="glass h-full flex flex-col rounded-2xl overflow-hidden animate-in slide-in-from-right-8 duration-300 relative p-2!">
         {/* Film Grain Overlay (from global.css) */}
@@ -172,8 +173,10 @@ export function RouteDetail({ route, onClose }: RouteDetailProps) {
           <button
             onClick={onClose}
             className="absolute top-6 right-6 p-2 -mr-2 -mt-2 rounded-lg text-[var(--color-text-muted)] hover:text-white hover:bg-white/[0.05] transition-colors"
+            aria-label="Close route details"
+            title="Close route details (Escape)"
           >
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4" aria-hidden="true" />
           </button>
 
           {/* Badges */}
@@ -190,7 +193,10 @@ export function RouteDetail({ route, onClose }: RouteDetailProps) {
             </span>
           </div>
 
-          <h1 className="text-2xl font-display font-medium text-[var(--color-text-primary)] leading-none mb-4! tracking-tight">
+          <h1
+            id="route-title"
+            className="text-2xl font-display font-medium text-[var(--color-text-primary)] leading-none mb-4! tracking-tight"
+          >
             {route.name}
           </h1>
         </div>

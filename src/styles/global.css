@@ -227,19 +227,42 @@ body {
   .glass {
     backdrop-filter: blur(20px) saturate(160%);
   }
-  
+
   /* Prevent text selection on mobile for better UX */
   .font-data {
     -webkit-user-select: none;
     user-select: none;
   }
-  
+
   /* Optimize touch targets */
   button,
   [role="button"],
   .cursor-pointer {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  /* Improve mobile scrolling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+
+  /* Better mobile modal positioning */
+  .fixed-modal {
+    position: fixed;
+    inset: 1rem;
+    max-height: calc(100vh - 2rem);
+  }
+
+  /* Mobile map controls */
+  .maplibregl-ctrl {
+    font-size: 14px;
+  }
+
+  .maplibregl-ctrl button {
+    width: 36px;
+    height: 36px;
   }
 }
 

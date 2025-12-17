@@ -15,16 +15,37 @@ import "../styles/global.css";
     />
     <meta name="keywords" content="high-speed rail, HSR, USA, infrastructure, visualization, data, transportation" />
     <meta name="author" content="HSRmap" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="HSRmap — High-Speed Rail Network Status" />
-    <meta property="og:description" content="Visualization of America's high-speed rail network. Real-time construction status, speeds, and cost data." />
+    <meta property="og:description" content="Visualization of America's high-speed rail network. Real-time construction status, speeds, and cost data. A source of truth for HSR infrastructure." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hsrmap.dev" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="HSRmap - High-Speed Rail Network Visualization" />
+    <meta property="og:site_name" content="HSRmap" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HSRmap — High-Speed Rail Network Status" />
+    <meta name="twitter:description" content="Visualization of America's high-speed rail network. Real-time construction status, speeds, and cost data." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image:alt" content="HSRmap - High-Speed Rail Network Visualization" />
     
     <!-- Theme Color -->
     <meta name="theme-color" content="hsl(240, 5%, 8%)" />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,8 +54,37 @@ import "../styles/global.css";
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HSRmap",
+      "description": "Visualization of America's high-speed rail network with real-time construction status, speeds, and cost data.",
+      "url": "https://hsrmap.dev",
+      "applicationCategory": "MappingApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HSRmap"
+      },
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://hsrmap.dev",
+        "description": "View high-speed rail network map"
+      }
+    }
+    </script>
   </head>
   <body>
-    <VelocityApp client:only="react" />
+    <div id="root">
+      <VelocityApp client:only="react" />
+    </div>
   </body>
 </html>
