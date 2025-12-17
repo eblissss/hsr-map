@@ -14,7 +14,11 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 import type { RailRoute } from "../types";
-import { STATUS_COLORS } from "../utils/colors"; // We will use CSS vars mostly, but keep this for fallback
+import {
+  STATUS_COLORS,
+  getColorBySpeed,
+  getColorHexBySpeed,
+} from "../utils/colors";
 import {
   calculateCostPerMile,
   formatLargeNumber,
@@ -28,11 +32,15 @@ function cn(...inputs: ClassValue[]) {
 
 // --- Helper: Get Thermal Color Class based on speed ---
 const getMachClass = (speed: number) => {
-  if (speed >= 220)
-    return "text-[var(--color-mach-3)] drop-shadow-[0_0_15px_rgba(255,87,34,0.5)]";
-  if (speed >= 150)
-    return "text-[var(--color-mach-2)] drop-shadow-[0_0_15px_rgba(255,193,7,0.4)]";
-  return "text-[var(--color-mach-1)] drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]";
+  const hexColor = getColorHexBySpeed(speed);
+  const rgbColor = getColorBySpeed(speed);
+  const [r, g, b] = rgbColor;
+
+  // Create RGBA for drop-shadow (with appropriate opacity based on speed)
+  const rgbaOpacity = speed >= 200 ? "0.4" : speed >= 150 ? "0.4" : "0.5";
+  const rgbaColor = `rgba(${r},${g},${b},${rgbaOpacity})`;
+
+  return `text-[${hexColor}] drop-shadow-[0_0_15px_${rgbaColor}]`;
 };
 
 // --- Sub-Components ---
